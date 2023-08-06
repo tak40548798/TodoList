@@ -1,0 +1,128 @@
+:root {
+  --PrimaryColor: #55d040;
+  --TextColor: #3b3f4e;
+  --EditTextColor: #c2c2c2;
+  --BackGroundColor: #fafafa;
+  --EditBottomColor: #55d04099;
+  font-family: sans-serif, serif;
+}
+
+h2 {
+  margin: 0px 0px 24px 0px;
+  color: var(--TextColor);
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 480px;
+  min-height: 320px;
+  margin: auto;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: var(--BackGroundColor);
+  border: 1px solid var(--PrimaryColor);
+  border-radius: 12px;
+}
+
+.todo-app-header {
+  height: 40px;
+  margin-bottom: 14px;
+}
+
+.todo-app-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-app-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.item-task {
+  width: 200px;
+  color: var(--TextColor);
+  font-size: 20px;
+  word-break: break-all;
+}
+
+.item-task-completed span {
+  text-decoration: line-through;
+}
+
+/* custom input stype */
+.input[type="text"] {
+  appearance: none;
+  box-sizing: border-box;
+}
+.input[type="text"]:focus {
+  outline: none;
+}
+.input-todo[type="text"] {
+  width: 215px;
+  height: 100%;
+  font-size: 20px;
+  border: 2px solid var(--PrimaryColor);
+  border-radius: 3px;
+}
+.input-task[type="text"] {
+  width: 180px;
+  height: auto;
+  border-width: 0px 0px 2px 0px;
+  font-size: 20px;
+  color: var(--EditTextColor);
+  background-color: var(--BackGroundColor);
+  border-color: var(--EditBottomColor);
+}
+
+/* custom ceheck style */
+.checkbox[type="checkbox"] {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin: 0px 10px 0px 0px;
+  border: 2px solid var(--PrimaryColor);
+  background-color: var(--BackGroundColor);
+}
+.checkbox[type="checkbox"]::before {
+  display: none;
+  width: 100%;
+  height: 100%;
+  content: "";
+  /* 把打勾符號裁切出來 */
+  clip-path: polygon(28% 38%, 41% 53%, 75% 24%, 86% 38%, 40% 78%, 15% 50%);
+  background-color: var(--PrimaryColor);
+}
+.checkbox[type="checkbox"]:checked::before {
+  display: block;
+}
+/* custom button style */
+.button {
+  appearance: none;
+  margin-left: 10px;
+  padding: 2px 12px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid var(--TextColor);
+  color: var(--TextColor);
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.button-todo {
+  height: 100%;
+  padding: 0px 12px;
+  border: none;
+  color: var(--BackGroundColor);
+  background-color: var(--PrimaryColor);
+}
+/* .button-update,
+.button-delete,
+.button-edit {
+} */
